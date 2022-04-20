@@ -9,12 +9,12 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'home' });
 });
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'home' });
+  res.render('login', { title: 'login' });
 });
 router.post('/user', function(req, res, next) {
   const name = req.body.name;
   //views에 있는 동일한 이름의 ejs 파일을 찾아와서 가져온다.
-  res.render('user', { title: 'home', user: name});
+  res.render('user', { title: 'user', user: name});
 });
 
 module.exports = router;
